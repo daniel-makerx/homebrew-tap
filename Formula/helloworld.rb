@@ -10,8 +10,9 @@ class Helloworld < Formula
 
   bottle do
     root_url "https://github.com/daniel-makerx/homebrew-tap/releases/download/helloworld-0.1.0-beta.1"
-    sha256 cellar: :any_skip_relocation, monterey:     "504119d42cce2881d4ad280a2d29bc29258367a36de7029e34c910aeeb73c270"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "e46a70968b46b290bee709b0ae77facae27c33314b7f79cb5c839e2e88995787"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "5a2906c221ae0c51bb9b4a494179bc7ce21e864466c8c5b4e9baebbb0b0b20c9"
+    sha256 cellar: :any_skip_relocation, monterey:      "504119d42cce2881d4ad280a2d29bc29258367a36de7029e34c910aeeb73c270"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e46a70968b46b290bee709b0ae77facae27c33314b7f79cb5c839e2e88995787"
   end
 
   depends_on "python3"
