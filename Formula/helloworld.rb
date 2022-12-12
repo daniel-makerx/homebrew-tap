@@ -1,21 +1,15 @@
 class Helloworld < Formula
   include Language::Python::Virtualenv
 
-  desc "Says Hello"
+  desc "Says Hello World"
   homepage "https://github.com/daniel-makerx/helloworld"
-  url "https://github.com/daniel-makerx/helloworld/archive/refs/tags/v0.1.0-beta.1.tar.gz"
-  sha256 "c7d78c44d8511add56f3da4a84aadfff4f177fdb6a9dd3f2b104b6e518de65b7"
+  url "https://github.com/daniel-makerx/helloworld/archive/refs/tags/v0.1.0-beta.12.tar.gz"
+  sha256 "166ee9456169a351c662a0efcf62bd35cc62fb03bb796490105d93356bebd93b"
   license "MIT"
   head "git+https://github.com/daniel-makerx/helloworld.git", branch: "main"
 
-  bottle do
-    root_url "https://github.com/daniel-makerx/homebrew-tap/releases/download/helloworld-0.1.0-beta.1"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "5a2906c221ae0c51bb9b4a494179bc7ce21e864466c8c5b4e9baebbb0b0b20c9"
-    sha256 cellar: :any_skip_relocation, monterey:      "504119d42cce2881d4ad280a2d29bc29258367a36de7029e34c910aeeb73c270"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e46a70968b46b290bee709b0ae77facae27c33314b7f79cb5c839e2e88995787"
-  end
-
-  depends_on "python3"
+  depends_on "python@3.10"
+  depends_on "pipx"
 
   resource "anyio" do
     url "https://files.pythonhosted.org/packages/8b/94/6928d4345f2bc1beecbff03325cad43d320717f51ab74ab5a571324f4f5a/anyio-3.6.2.tar.gz"
@@ -93,8 +87,8 @@ class Helloworld < Formula
   end
 
   resource "pathspec" do
-    url "https://files.pythonhosted.org/packages/a2/29/959c72e1a6c3c25eaa46b9bfcc7fd401f65af83163d4796af09272c83c8a/pathspec-0.10.2.tar.gz"
-    sha256 "8f6bf73e5758fd365ef5d58ce09ac7c27d2833a8d7da51712eac6e27e35141b0"
+    url "https://files.pythonhosted.org/packages/32/1a/6baf904503c3e943cae9605c9c88a43b964dea5b59785cf956091b341b08/pathspec-0.10.3.tar.gz"
+    sha256 "56200de4077d9d0791465aa9095a01d421861e405b5096955051deefd697d6f6"
   end
 
   resource "plumbum" do
