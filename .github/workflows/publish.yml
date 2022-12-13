@@ -1,11 +1,10 @@
 name: brew pr-pull
+
 on:
-  pull_request_target:
-    types:
-      - labeled
+  workflow_call:
+
 jobs:
   pr-pull:
-    if: contains(github.event.pull_request.labels.*.name, 'pr-pull')
     runs-on: ubuntu-22.04
     steps:
       - name: Set up Homebrew

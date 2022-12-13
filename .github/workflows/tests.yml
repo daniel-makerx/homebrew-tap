@@ -42,3 +42,8 @@ jobs:
         with:
           name: bottles
           path: '*.bottle.*'
+  
+  publish:
+    name: Publish Pull Request
+    needs: test-bot
+    uses: ./.github/workflows/publish.yaml
