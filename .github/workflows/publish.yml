@@ -31,7 +31,7 @@ jobs:
 
       - name: Delete branch
         env:
-          PULL_REQUEST: ${{ input.pull_request }}
+          PULL_REQUEST: ${{ inputs.pull_request }}
           GH_TOKEN: ${{ github.token }}
         run: |
           branch=`gh pr view $PULL_REQUEST --json headRefName -q .headRefName`
