@@ -3,8 +3,8 @@ class Helloworld < Formula
 
   desc "Says Hello World"
   homepage "https://github.com/daniel-makerx/helloworld"
-  url "https://github.com/daniel-makerx/helloworld/archive/refs/tags/v0.2.4.tar.gz"
-  sha256 "758b3e334631539003d9c97a4c1ac0cc7391002fd512af75f74ee53c113e3bd9"
+  url "https://github.com/daniel-makerx/helloworld/archive/refs/tags/v0.2.5.tar.gz"
+  sha256 "754f505d09099375328c7fdeac74b31157f71c94b84b091b7cc706a2459cb52b"
   license "MIT"
   head "git+https://github.com/daniel-makerx/helloworld.git", branch: "main"
 
@@ -151,6 +151,6 @@ class Helloworld < Formula
   end
 
   test do
-    assert_equal "helloworld, version 0.2.4", shell_output(bin/"helloworld --version").strip
+    assert_equal "helloworld, version 0.2.5", shell_output(bin/"helloworld --version").strip
   end
 end
