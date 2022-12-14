@@ -3,15 +3,10 @@ class Helloworld < Formula
 
   desc "Says Hello World"
   homepage "https://github.com/daniel-makerx/helloworld"
-  url "https://github.com/daniel-makerx/helloworld/archive/refs/tags/v0.2.5.tar.gz"
-  sha256 "754f505d09099375328c7fdeac74b31157f71c94b84b091b7cc706a2459cb52b"
+  url "https://github.com/daniel-makerx/helloworld/archive/refs/tags/v0.2.6.tar.gz"
+  sha256 "4d362341cd6b29ac6580dedb8047c16a758a92ad5867f3b70a44469583db11f6"
   license "MIT"
   head "git+https://github.com/daniel-makerx/helloworld.git", branch: "main"
-
-  bottle do
-    root_url "https://github.com/daniel-makerx/homebrew-tap/releases/download/helloworld-0.2.5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "1c4a447216aba25d51ab2ee58ff6f97ffcf3ecf03172d72a6e65131831e3ac8f"
-  end
 
   depends_on "pipx"
   depends_on "python@3.10"
@@ -156,6 +151,6 @@ class Helloworld < Formula
   end
 
   test do
-    assert_equal "helloworld, version 0.2.5", shell_output(bin/"helloworld --version").strip
+    assert_equal "helloworld, version 0.2.6", shell_output(bin/"helloworld --version").strip
   end
 end
