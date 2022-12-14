@@ -1,8 +1,10 @@
 name: brew pr-pull
 on:
-  pull_request_target:
-    types:
-      - labeled
+  workflow_dispatch:
+    inputs:
+      pull_request:
+        description: 'Pull Request number to publish'
+        required: true
 jobs:
   pr-pull:
     if: contains(github.event.pull_request.labels.*.name, 'pr-pull')
@@ -19,7 +21,7 @@ jobs:
           HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
           HOMEBREW_GITHUB_PACKAGES_TOKEN: ${{ github.token }}
           HOMEBREW_GITHUB_PACKAGES_USER: ${{ github.actor }}
-          PULL_REQUEST: ${{ github.event.pull_request.number }}
+          PULL_REQUEST: ${{ inputs.pull_request }}
         run: brew pr-pull --debug --tap=$GITHUB_REPOSITORY $PULL_REQUEST
 
       - name: Push commits
