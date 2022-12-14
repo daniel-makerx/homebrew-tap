@@ -8,6 +8,11 @@ class Helloworld < Formula
   license "MIT"
   head "git+https://github.com/daniel-makerx/helloworld.git", branch: "main"
 
+  bottle do
+    root_url "https://github.com/daniel-makerx/homebrew-tap/releases/download/helloworld-0.2.5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "1c4a447216aba25d51ab2ee58ff6f97ffcf3ecf03172d72a6e65131831e3ac8f"
+  end
+
   depends_on "pipx"
   depends_on "python@3.10"
 
