@@ -30,7 +30,9 @@ jobs:
           branch: main
 
       - name: Delete branch
-        if: github.event.pull_request.head.repo.fork == false
         env:
-          BRANCH: ${{ github.event.pull_request.head.ref }}
-        run: git push --delete origin $BRANCH
+          PULL_REQUEST: ${{ input.pull_request }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          branch=`gh pr view $PULL_REQUEST --json headRefName -q .headRefName`
+          git push --delete origin $branch
