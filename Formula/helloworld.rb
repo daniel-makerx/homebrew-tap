@@ -3,17 +3,10 @@ class Helloworld < Formula
 
   desc "Says Hello World"
   homepage "https://github.com/daniel-makerx/helloworld"
-  url "https://github.com/daniel-makerx/helloworld/archive/refs/tags/v0.3.2.tar.gz"
-  sha256 "75b3712dfbdcb0c442647dad0593b08956b03a572e62b57e5a36d4971c9bc7a4"
+  url "https://github.com/daniel-makerx/helloworld/archive/refs/tags/v0.3.3.tar.gz"
+  sha256 "d4be9e83efb127feccc452a070b92101b4451d57e88afe932699519486b76442"
   license "MIT"
   head "git+https://github.com/daniel-makerx/helloworld.git", branch: "main"
-
-  bottle do
-    root_url "https://github.com/daniel-makerx/homebrew-tap/releases/download/helloworld-0.3.2"
-    sha256 cellar: :any_skip_relocation, monterey:     "73a8c87aa19c82314495b9e28804882afb4bb1ece54de25a5e41a55b716f7ba2"
-    sha256 cellar: :any_skip_relocation, big_sur:      "e8811faaf4e87a03a9e82a74da7e685fd354691f8e1b66d528dfd9661bc6dc60"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "eeb6557be7aad757c6104c00a86d91d87a3f2797ea92ba37b7c05b8974ac0515"
-  end
 
   depends_on "pipx"
   depends_on "python@3.10"
@@ -54,13 +47,13 @@ class Helloworld < Formula
   end
 
   resource "httpcore" do
-    url "https://files.pythonhosted.org/packages/9b/20/26f6cc4fd00391f8f1c57b0020f5c6eec23904723db04b6f7608e222d815/httpcore-0.16.2.tar.gz"
-    sha256 "c35c5176dc82db732acfd90b581a3062c999a72305df30c0fc8fafd8e4aca068"
+    url "https://files.pythonhosted.org/packages/61/42/5c456b02816845d163fab0f32936b6a5b649f3f915beff6f819f4f6c90b2/httpcore-0.16.3.tar.gz"
+    sha256 "c5d6f04e2fc530f39e0c077e6a30caa53f1451096120f1f38b954afd0b17c0cb"
   end
 
   resource "httpx" do
-    url "https://files.pythonhosted.org/packages/8a/df/a3e8b91dfb452e645ef110985a30f0915276a1a2144004c7671c07bb203c/httpx-0.23.1.tar.gz"
-    sha256 "202ae15319be24efe9a8bd4ed4360e68fde7b38bcc2ce87088d416f026667d19"
+    url "https://files.pythonhosted.org/packages/f5/50/04d5e8ee398a10c767a341a25f59ff8711ae3adf0143c7f8b45fc560d72d/httpx-0.23.3.tar.gz"
+    sha256 "9818458eb565bb54898ccb9b8b251a28785dd4a55afbc23d0eb410754fe7d0f9"
   end
 
   resource "idna" do
@@ -89,8 +82,8 @@ class Helloworld < Formula
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/6b/f7/c240d7654ddd2d2f3f328d8468d4f1f876865f6b9038b146bec0a6737c65/packaging-22.0.tar.gz"
-    sha256 "2198ec20bd4c017b8f9717e00f0c8714076fc2fd93816750ab48e2c41de2cfd3"
+    url "https://files.pythonhosted.org/packages/47/d5/aca8ff6f49aa5565df1c826e7bf5e85a6df852ee063600c1efa5b932968c/packaging-23.0.tar.gz"
+    sha256 "b6ad297f8907de0fa2fe1ccbd26fdaf387f5f47c7275fedf8cce89f99446cf97"
   end
 
   resource "pathspec" do
@@ -99,8 +92,8 @@ class Helloworld < Formula
   end
 
   resource "plumbum" do
-    url "https://files.pythonhosted.org/packages/5f/c9/67b40a607f9815275c7867f9ec60700f442c186d3cca235156cb4fa19c33/plumbum-1.8.0.tar.gz"
-    sha256 "f1da1f167a2afe731a85de3f56810f424926c0a1a8fd1999ceb2ef20b618246d"
+    url "https://files.pythonhosted.org/packages/56/e0/bcff74e68f8b71f4b9ce9e79b533df6d1ecff33c856fb93aab7e8a7c8d82/plumbum-1.8.1.tar.gz"
+    sha256 "88a40fc69247d0cd585e21ca169b3820f46c484535102e16455d2202727bb37b"
   end
 
   resource "prompt-toolkit" do
@@ -109,13 +102,13 @@ class Helloworld < Formula
   end
 
   resource "pydantic" do
-    url "https://files.pythonhosted.org/packages/7d/7d/58dd62f792b002fa28cce4e83cb90f4359809e6d12db86eedf26a752895c/pydantic-1.10.2.tar.gz"
-    sha256 "91b8e218852ef6007c2b98cd861601c6a09f1aa32bbbb74fab5b1c33d4a1e410"
+    url "https://files.pythonhosted.org/packages/53/17/34e54e352f6a3d304044e52d5ddd5cd621a62ec8fb7af08cc73af65dd3e1/pydantic-1.10.4.tar.gz"
+    sha256 "b9a3859f24eb4e097502a3be1fb4b2abb79b6103dd9e2e0edb70613a4459a648"
   end
 
   resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/e0/ef/5905cd3642f2337d44143529c941cc3a02e5af16f0f65f81cbef7af452bb/Pygments-2.13.0.tar.gz"
-    sha256 "56a8508ae95f98e2b9bdf93a6be5ae3f7d8af858b43e02c5a2ff083726be40c1"
+    url "https://files.pythonhosted.org/packages/da/6a/c427c06913204e24de28de5300d3f0e809933f376e0b7df95194b2bb3f71/Pygments-2.14.0.tar.gz"
+    sha256 "b3ed06a9e8ac9a9aae5a6f5dbe78a8a58655d17b43b93c078f094ddc476ae297"
   end
 
   resource "PyYAML" do
@@ -158,6 +151,6 @@ class Helloworld < Formula
   end
 
   test do
-    assert_equal "helloworld, version 0.3.2", shell_output(bin/"helloworld --version").strip
+    assert_equal "helloworld, version 0.3.3", shell_output(bin/"helloworld --version").strip
   end
 end
