@@ -14,12 +14,13 @@ cask "algokit" do
   container type: :naked
 
   installer script: {
-    executable: "pipx",
-    args:       ["install", "#{staged_path}/algokit_cli-0.1.2-py3-none-any.whl"],
+    executable:   "pipx",
+    args:         ["install", "--force", "#{staged_path}/algokit_cli-0.1.2-py3-none-any.whl"],
+    print_stderr: false,
   }
   installer script: {
     executable: "bash",
-    args:       ["-c", "echo /opt/homebrew/bin/pipx uninstall algokit_cli >#{staged_path}/uninstall.sh"],
+    args:       ["-c", "echo $(which pipx) uninstall algokit_cli >#{staged_path}/uninstall.sh"],
   }
 
   uninstall script: {
